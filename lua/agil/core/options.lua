@@ -40,3 +40,6 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- change shell
+-- opt.shell = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
