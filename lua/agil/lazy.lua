@@ -9,17 +9,25 @@ if not vim.loop.fs_stat(lazypath) then
 		lazypath,
 	})
 end
-vim.opt.rtp:prepend(lazypath)
+vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
-require("lazy").setup({ { import = "agil.plugins" }, { import = "agil.plugins.lsp" } }, {
-	install = {
-		colorscheme = { "nightfly" },
-	},
-	checker = {
-		enabled = true,
-		notify = false,
-	},
+require("lazy").setup('agil.plugins', {
 	change_detection = {
-		notify = false,
+		notify = false
+	},
+	performance = {
+		rtp = {
+			-- disable some rtp plugins
+			disabled_plugins = {
+				"gzip",
+				-- "matchit",
+				-- "matchparen",
+				-- "netrwPlugin",
+				"tarPlugin",
+				"tohtml",
+				"tutor",
+				"zipPlugin",
+			},
+		},
 	},
 })
