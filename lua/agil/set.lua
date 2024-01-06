@@ -2,6 +2,7 @@
 
 vim.opt.nu = true
 vim.opt.relativenumber = false
+vim.o.relativenumber = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.tabstop = 4

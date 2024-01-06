@@ -17,8 +17,8 @@ tree.setup {
 		dotfiles = false,
 	},
 	view = {
-		number = true,
-		relativenumber = true,
+		number = false,
+		relativenumber = false,
 		width = 45,
 		-- preservce_window_proportions = true,
 	},
